@@ -11,9 +11,6 @@ This package retrieves plant data information from Venidera Miran and returns di
 - CEPEL plant naming and coding standards (used in NEWAVE, SUISHI, DECOMP and DESSEM)
 - ONS naming standards
 
-## Table of contents
-[TOC]
-
 ## Requirements
 
 * Access to Venidera Miran infraestructure. Please [contact us for info regarding plans and pricing.](https://portal.venidera.com/contact/)
@@ -57,10 +54,10 @@ The setup.py file is what describes the package, and tells setuptools how to pac
 ## Development and Tests
 
 ### 1. Cloning the repository
-The first step aims to clone the `vplantnaming` repository from Bitbucket. If you don't have SSH configured, then you need to use the HTTPS protocol to communicate between your local system and Bitbucket Cloud. It is possible to change the current working directory to the location where you want the cloned directory to be made.
+The first step aims to clone the `vplantnaming` repository from GitHub. If you don't have SSH configured, then you need to use the HTTPS protocol to communicate between your local system and GitHub Cloud. It is possible to change the current working directory to the location where you want the cloned directory to be made.
 ```bash
 $ mkdir ~/git
-$ git clone git@bitbucket.org:venidera/vplantnaming.git ~/git/vplantnaming
+$ git clone https://github.com/venidera/vplantnaming.git ~/git/vplantnaming
 $ cd ~/git/vplantnaming
 ```
 
@@ -86,7 +83,7 @@ Python tests are Python classes that reside in separate files from the code bein
 ```bash
 ( vplantnaming ) $ python setup.py test
 ```
-In general, the developer can create and perform as many tests as he needs. However, it is important to validate them before committing a new change to the Bitbucket Cloud, as a way of avoiding errors. It is also important to mention that tests will only be performed if test classes extend the `unittest.TestCase` object.
+In general, the developer can create and perform as many tests as he needs. However, it is important to validate them before committing a new change to the GitHub Cloud, as a way of avoiding errors. It is also important to mention that tests will only be performed if test classes extend the `unittest.TestCase` object.
 
 
 ### 5. Running the application
@@ -99,7 +96,7 @@ Note that the `run.py` script contains basic code for understanding how this pac
 
 ## Troubleshooting
 
-Please file a BitBucket issue to [report a bug](https://github.com/venidera/vplantnaming/issues).
+Please file a GitHub issue to [report a bug](https://github.com/venidera/vplantnaming/issues).
 
 ## Maintainers
 
