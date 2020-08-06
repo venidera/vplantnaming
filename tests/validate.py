@@ -38,8 +38,8 @@ class TestPlantNaming(unittest.TestCase):
     def test_method(self):
         """ Basic test method """
         testobj = PlantNaming(CON)
-        self.assertIsInstance(testobj.dessem_sagic_name, dict,
+        self.assertIsInstance(testobj.match_dict, dict,
                               'Error. Not a dictionary!')
-        self.assertTrue('uhe' in testobj.dessem_sagic_name and
-                        'ute' in testobj.dessem_sagic_name,
+        self.assertTrue('uhe' in testobj.match_dict and
+                        'ute' in testobj.match_dict,
                         'Dictionary structure is corrupted')

@@ -32,3 +32,5 @@ if not RES:
     raise Exception('Could not login into Venidera Miran')
 
 NAMING = PlantNaming(CON)
+MATCH = NAMING.match_dict
+PLANTS = NAMING.miran_plants
