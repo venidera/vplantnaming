@@ -99,7 +99,7 @@ Note that the `run.py` script contains basic code for understanding how this pac
 
 ## Troubleshooting
 
-Please file a BitBucket issue to [report a bug](https://bitbucket.org/venidera/data-models/issues?status=new&status=open).
+Please file a BitBucket issue to [report a bug](https://github.com/venidera/vplantnaming/issues).
 
 ## Maintainers
 
