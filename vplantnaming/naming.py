@@ -114,7 +114,7 @@ class PlantNaming():
                             self.match_dict[plant_type]['by_' + from_data_var][
                                 i] = dict()
                         self.match_dict[plant_type]['by_' + from_data_var][
-                            i][to_data_var] = data[to_data_var]
+                            i][to_data_var] = list(set(data[to_data_var]))
 
     def __compute_cepel_map(self):
         """ retorna o arquivo de-para do sagic<->dessem"""
@@ -139,6 +139,7 @@ class PlantNaming():
                     barras_anarede = list()
                     if 'barras_anarede' in cepel_item:
                         barras_anarede += cepel_item['barras_anarede']
+                        barras_anarede = list(set(barras_anarede))
                     if 'nome_id' in cepel_item:
                         for nome_id in cepel_item['nome_id']:
                             data = {
