@@ -122,20 +122,21 @@ class PlantNaming():
             for ceg_norm, plant in self.miran_plants[plant_type].items():
                 if 'cepel' not in plant['data'] or 'ons' not in plant['data']:
                     continue
-                sagic_names = list()
-                for _, sagic_item in plant['data']['ons'].items():
-                    sagic_names += sagic_item['sagic_nome_id']
-                sagic_names = list(set(sagic_names))
-                ana_names = list()
-                ana_ids = list()
-                if 'ana' in plant['data']:
-                    for ana_id, ana_item in plant['data']['ana'].items():
-                        ana_ids.append(int(ana_id))
-                        ana_names += ana_item['nome_id']
-                sagic_names = list(set(sagic_names))
-                ana_names = list(set(ana_names))
-                ana_ids = list(set(ana_ids))
                 for cepel_num, cepel_item in plant['data']['cepel'].items():
+                    sagic_names = list()
+                    for _, sagic_item in plant['data']['ons'].items():
+                        if cepel_num in sagic_item['cepelid']:
+                            sagic_names += sagic_item['sagic_nome_id']
+                    sagic_names = list(set(sagic_names))
+                    ana_names = list()
+                    ana_ids = list()
+                    if 'ana' in plant['data']:
+                        for ana_id, ana_item in plant['data']['ana'].items():
+                            if cepel_num in ana_item['cepelid']:
+                                ana_ids.append(ana_id)
+                                ana_names += ana_item['nome_id']
+                    ana_names = list(set(ana_names))
+                    ana_ids = list(set(ana_ids))
                     barras_anarede = list()
                     if 'barras_anarede' in cepel_item:
                         barras_anarede += cepel_item['barras_anarede']
